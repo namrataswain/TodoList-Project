@@ -4,6 +4,8 @@ $("li").click(function(){
 });
 // click on X to delte todo
 $("span").click(function(event){
-	alert("clicked on a span");
+	$(this).parent().fadeOut(500,function(){
+       $(this).remove();
+	});
 	event.stopPropagation();
 });
