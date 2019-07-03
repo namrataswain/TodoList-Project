@@ -1,9 +1,9 @@
 //Check off Specific Todos By clicking on it 
-$("li").click(function(){
+$("ul").on('click' , 'li', function(){
 	$(this).toggleClass("completed");
 });
 // click on X to delte todo
-$("span").click(function(event){
+$("ul").on('click', 'span' ,function(event){
 	$(this).parent().fadeOut(500,function(){
        $(this).remove();
 	});
